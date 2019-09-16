@@ -1,0 +1,124 @@
+@import'../../assets/scss/variables';
+.container-humano{
+
+    .flat-form{
+
+background: #FFAC7C;
+margin: 25px auto;
+width: 500px; /*poner enmedio*/
+height: 700px;/*largo*/
+font-size: 30px;
+filter: blur(0.4px);
+border-radius: 6px;
+
+}
+
+.flat-form h2 {
+font-size: 30px;
+padding-bottom: 10px;
+font-family: 'handlee', cursive;
+}
+
+.flat-form p {
+
+font-size: 17px;
+padding-bottom: 5px;
+line-height: 20px;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=date]
+{
+width: 85%;
+height: 40px;
+font-size: 20px;  
+background: #fff;
+border: 1 px;
+outline: none;
+font-family: 'Arial';
+}
+
+
+.flat-form{
+background: #FFAC7C;
+margin: 25px auto;
+width: 500px; /*poner enmedio*/
+height: 700px;/*largo*/
+font-size: 30px;
+filter: blur(0.4px);
+border-radius: 6px;
+
+}
+
+.tabs {
+height: 50px;
+margin: 0;
+padding: 10px;
+list-style-type: none;
+width: 100%;
+position: relative;
+display: block;
+/*display: flex;
+flex-direction: column;*/
+margin-bottom: 0px;
+}
+
+.tabs li{
+display: block;
+/* float: left;*/
+
+}
+.tabs li:last-child {
+border-right: none;
+width: 174px;
+padding-left: 0;
+padding-right: 0;
+text-align: center;
+}
+
+.registrar {
+display:flex;
+}
+
+.selection2{
+display: flex;
+height: 100px; 
+justify-content: center;
+}
+
+
+
+
+
+.button-2{
+/*border: none;  
+background: #136899;
+color: #ffffff;
+border-radius: 5px;
+/*box-shadow: 0px 3px 1px #2075aa;*/
+
+ 
+margin: 25px auto;
+width: 90px; /*poner enmedio*/
+height: 40px;/*largo*/
+font-size: 30px;
+filter: blur(0.4px);
+display: flex;
+background: #55ACEE;
+border-radius: 5px;
+border: none;
+}
+
+.button-2:active{
+color: #3B5998;
+}
+.button-2:hover{
+font-size: 30px;
+opacity: 0.7;
+
+}
+
+
+
+}

@@ -1,0 +1,16 @@
+
+@import '../assets/scss/variables';
+
+.dropdown{
+
+    color: white;
+    //box-shadow: inset 0 3px 0 0 #ededed;
+    //box-shadow: inset 0 3px 0 0 white!important;
+    display: flex;
+
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}

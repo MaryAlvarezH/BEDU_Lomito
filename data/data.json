@@ -1,0 +1,245 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Mary",
+      "lastName": "Alvarez"
+    },
+    {
+      "id": 2,
+      "firstName": "Emmanuel",
+      "lastName": "Velasco"
+    },
+    {
+      "id": 3,
+      "firstName": "Daniela",
+      "lastName": "Alvarez"
+    },
+    {
+      "id": 4,
+      "firstName": "Raquel",
+      "lastName": "De la Rosa"
+    },
+    {
+      "Nombres": "david",
+      "Apellidos": "roman",
+      "date": "",
+      "Email": "jobroman83@gmail.com",
+      "Contraseña": "lomitosreact",
+      "ConfirmarContraseña": "lomitosreact",
+      "Telefono": "5565606769",
+      "Direccion": "postal 8",
+      "CodigoPostal": "16200",
+      "Estado": "Hidalgo",
+      "id": 5
+    },
+    {
+      "Nombres": "david",
+      "Apellidos": "roman",
+      "date": "2019-08-13",
+      "Email": "jobroman83@gmail.com",
+      "Contraseña": "lomitosreact",
+      "ConfirmarContraseña": "lomitosreact",
+      "Telefono": "5565606769",
+      "Direccion": "postal 8",
+      "CodigoPostal": "16200",
+      "Estado": "Hidalgo",
+      "id": 6
+    },
+    {
+      "Nombres": "Maria Isabel ",
+      "Apellidos": "Alvarez Hernandez",
+      "date": "2019-08-06",
+      "Email": "maria.alvarez9409@gmail.com",
+      "Contraseña": "201105",
+      "ConfirmarContraseña": "201105",
+      "Telefono": "5570093059",
+      "Direccion": "Miguel Hidalgo",
+      "CodigoPostal": "02120",
+      "Estado": "Distrito Federal",
+      "id": 7
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "coco",
+      "sort": "perro",
+      "gender": "hembra",
+      "breed": "pug",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "6 meses",
+      "skills": [
+        "entrenada",
+        "sociable"
+      ],
+      "observations": "vacunada",
+      "ownerId": 1
+    },
+    {
+      "id": 2,
+      "name": "bruno",
+      "sort": "perro",
+      "gender": "macho",
+      "breed": "cooker",
+      "size": "mediano",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "sociable",
+        "jugueton",
+        "obediente",
+        "inteligente"
+      ],
+      "observations": "vacunado y esterilizado",
+      "ownerId": 2
+    },
+    {
+      "id": 3,
+      "name": "blanca",
+      "sort": "perro",
+      "gender": "hembra",
+      "breed": "n/a",
+      "size": "grande",
+      "temperament": "tranquilo",
+      "age": "3 años",
+      "skills": [
+        "entrenada",
+        "sociable",
+        "tranquila"
+      ],
+      "observations": "vacunada y esterilizada",
+      "ownerId": 3
+    },
+    {
+      "id": 4,
+      "name": "hercules",
+      "sort": "perro",
+      "gender": "macho",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "protector",
+        "jugueton"
+      ],
+      "observations": "vacunado",
+      "ownerId": 4
+    },
+    {
+      "id": 5,
+      "name": "dalila",
+      "sort": "perro",
+      "gender": "hembra",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "protectora",
+        "juguetona",
+        "inteligente"
+      ],
+      "observations": "vacunado, prefiere estar en casa a salir",
+      "ownerId": 5
+    },
+    {
+      "id": 6,
+      "name": "barry",
+      "sort": "perro",
+      "gender": "macho",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "vacunado, prefiere estar en casa a salir",
+      "ownerId": 6
+    },
+    {
+      "id": 7,
+      "name": "mishi",
+      "sort": "gato",
+      "gender": "macho",
+      "breed": "n/a",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 7
+    },
+    {
+      "id": 8,
+      "name": "mishi",
+      "sort": "gato",
+      "gender": "macho",
+      "breed": "n/a",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 8
+    },
+    {
+      "id": 9,
+      "name": "dama",
+      "sort": "perro",
+      "gender": "hembra",
+      "breed": "maltes",
+      "size": "chico",
+      "temperament": "activo",
+      "age": "5 meses",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 9
+    }
+  ],
+  "activity": [
+    {
+      "id": 1,
+      "userId": 1,
+      "petId": 2,
+      "like": true,
+      "comment": {
+        "registeredAt": "2019-08-20 14:00:00",
+        "text": "Estoy interesada pero me gustaria saber si Bruno es sociable con otos perros o gatos"
+      }
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "petId": 1,
+      "like": false,
+      "comment": {
+        "registeredAt": "2019-08-19 11:00:00",
+        "text": "Hola! Coco esta acostumbrada a estar dentro de la casa?"
+      }
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "petId": 1,
+      "like": false,
+      "comment": {
+        "registeredAt": "2019-08-13 15:00:00",
+        "text": "Por lo que sabido de conocidos que tienen un pug es que suelen ser un poco delicados en cuanto a salud, podrias ponerme al tanto del estado de Coco y de si tiene un atecedente medico que requiera cuidados especiales?"
+      }
+    }
+  ]
+}
