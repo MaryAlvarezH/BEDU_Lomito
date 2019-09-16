@@ -1,0 +1,147 @@
+  .info-pet-details {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    justify-content: center;
+    text-align: center;
+  }
+  .info-pet-details .card-full-details {
+    border-radius: 10px;
+    width: 720px;
+    flex-shrink: 0;
+    height: auto;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .info-pet-details .card-full-details .general-full-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+  .info-pet-details .card-full-details .image-full-details {
+    width: 220px;
+  }
+  .info-pet-details .card-full-details .description-full-details {
+    align-self: flex-start;
+    width: 500px;
+    text-align: left;
+    padding: 0px 50px;
+  }
+  .info-pet-details .card-full-details h2 {
+    margin-bottom: 20px;
+  }
+  .info-pet-details .card-full-details .image-full-details {
+    color: lightgray;
+    margin-bottom: 30px;
+  }
+  .info-pet-details .card-full-details .item-detail {
+    display: grid;
+    grid-template-columns: 140px 300px;
+    font-size: 15px;
+    padding: 6px;
+    grid-gap: 0 20px;
+  }
+  .info-pet-details .card-full-details span {
+    font-weight: 600;
+    // text-decoration: underline;
+  }
+  .info-pet-details .card-full-details p {
+    padding: 0;
+    margin: 0;
+  }
+  
+
+
+
+  .card-pet-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-pet-options .fa-heart {
+    color: red;
+    font-size: 35px;
+  }
+  .card-pet-options .fa-comments {
+    color: #5bc0de;
+    font-size: 35px;
+  }
+
+
+
+.btn-like {
+  background-color: transparent;
+  height: 36px;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+.btn-comment {
+  background-color: transparent;
+  color: white;
+  height: 36px;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+.btn-adopt {
+  background-color: #f78441;
+  color: white;
+  height: 36px;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+
+
+.commets-container {
+  display: flex;
+  border: 1px solid #d4d4d4;
+  padding-left: 15px;
+  border-radius: 5px;
+  width: 500px;
+  margin: 20px 130px;
+}
+.commets-container input {
+  height: 35px;
+  width: 450px;
+  border: transparent;
+}
+.commets-container .btn-comment {
+  background-color: #f78441;
+  color: white;
+  height: 37px;
+  border-color: transparent;
+  padding: 3px 8px;
+  border-radius: 0px 5px 5px 0px;
+  width: 80px;
+}
+
+.comment-detail {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  text-align: left;
+  margin: 30px 40px;
+}
+.comment-detail i {
+  color: #d4d4d4;
+}
+.comment-detail .coment-text {
+  margin-left: 20px;
+  font-size: 15px;
+  color:#515151;
+}
+
+.date {
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+
+.fa-user {
+  padding-top:10px;
+}

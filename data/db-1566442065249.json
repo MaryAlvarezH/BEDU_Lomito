@@ -1,0 +1,176 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Mary",
+      "lastName": "Alvarez"
+    },
+    {
+      "id": 2,
+      "firstName": "Emmanuel",
+      "lastName": "Velasco"
+    },
+    {
+      "id": 3,
+      "firstName": "Daniela",
+      "lastName": "Alvarez"
+    },
+    {
+      "id": 4,
+      "firstName": "Raquel",
+      "lastName": "De la Rosa"
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "coco",
+      "gender": "hembra",
+      "breed": "pug",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "6 meses",
+      "skills": [
+        "entrenada",
+        "sociable"
+      ],
+      "observations": "vacunada",
+      "ownerId": 1
+    },
+    {
+      "id": 2,
+      "name": "bruno",
+      "gender": "macho",
+      "breed": "cooker",
+      "size": "mediano",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "sociable",
+        "jugueton",
+        "obediente",
+        "inteligente"
+      ],
+      "observations": "vacunado y esterilizado",
+      "ownerId": 2
+    },
+    {
+      "id": 3,
+      "name": "blanca",
+      "gender": "hembra",
+      "breed": "n/a",
+      "size": "grande",
+      "temperament": "tranquilo",
+      "age": "3 años",
+      "skills": [
+        "entrenada",
+        "sociable",
+        "tranquila"
+      ],
+      "observations": "vacunada y esterilizada",
+      "ownerId": 3
+    },
+    {
+      "id": 4,
+      "name": "hercules",
+      "gender": "macho",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "protector",
+        "jugueton"
+      ],
+      "observations": "vacunado",
+      "ownerId": 4
+    },
+    {
+      "id": 5,
+      "name": "dalila",
+      "gender": "hembra",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "activo",
+      "age": "2 años",
+      "skills": [
+        "protectora",
+        "juguetona",
+        "inteligente"
+      ],
+      "observations": "vacunado, prefiere estar en casa a salir",
+      "ownerId": 5
+    },
+    {
+      "id": 6,
+      "name": "barry",
+      "gender": "macho",
+      "breed": "chihuahua",
+      "size": "pequeño",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "vacunado, prefiere estar en casa a salir",
+      "ownerId": 6
+    },
+    {
+      "id": 7,
+      "name": "mishi",
+      "gender": "macho",
+      "breed": "n/a",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 7
+    },
+    {
+      "id": 8,
+      "name": "mishi",
+      "gender": "macho",
+      "breed": "n/a",
+      "size": "mediano",
+      "temperament": "tranquilo",
+      "age": "1 año",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 8
+    },
+    {
+      "id": 9,
+      "name": "dama",
+      "gender": "hembra",
+      "breed": "maltes",
+      "size": "chico",
+      "temperament": "activo",
+      "age": "5 meses",
+      "skills": [
+        "inteligente",
+        "cariñoso"
+      ],
+      "observations": "le gusta salir de casa",
+      "ownerId": 9
+    }
+  ],
+  "activity": [
+    {
+      "userId": 1,
+      "petId": 2,
+      "like": true,
+      "comment": {
+        "registeredAt": "2019-08-20 14:00:00",
+        "text": "Estoy interesada pero me gustaria saber si Bruno es sociable con otos perros o gatos"
+      }
+    }
+  ]
+}

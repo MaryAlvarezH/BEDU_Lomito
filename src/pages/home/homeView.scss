@@ -1,0 +1,223 @@
+#hero { 
+    // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/images/portada2.jpg');
+    background: url('../../assets/images/portada2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    opacity: 0.9;
+    filter: blur(0.7px);
+    -webkit-filter: blur(0.7px);
+    display:flex;
+    flex-direction: column;
+
+
+.title-container {
+        margin: 8% 5%;
+}
+
+
+.title {
+        width:40%;
+        height: auto;
+        padding: 2vw!important;
+        border: 2px solid white;
+        border-left: none;
+        position: relative;
+        font-size: 2vw;
+        color:white;
+        display:flex;
+    }
+
+    .title:before {
+        color:white;
+        position: absolute;
+        content: '|';
+        top: -4%;
+        left: -0.7%;
+    }
+
+    .title:after {
+        color:white;
+        position: absolute;
+        content: '|';
+        bottom: -1%;
+        left: -0.7%;
+    }
+    .card-container {
+        width: 53vw;
+        height: 130px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 3%;
+        opacity: 0.2px;
+        flex-shrink: 0;
+    }
+    .card {
+        height: 8vw;
+        width: 10vw;
+        background-color: #ffa36d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5vw;
+        flex-shrink: 0;
+        color:white;
+        text-align: center;
+        font-size: 0.9vw;
+    }
+
+    .card h3 {
+        font-size: 1.2vw;
+    }
+
+    .card:hover {
+        height: 140px;
+        width: 190px;
+    }
+
+    .card i {
+        font-size: 2vw;
+    }
+}
+
+
+.about-us {
+    margin: 10vw 20vw 5vw 20vw;
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    
+  }
+  .about-us-image {
+      width: 40%;
+  }
+  .about-us-image img {
+    width: 100%;
+    // height: 220px;
+  }
+  
+  .about-us-details {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    height: 140px;
+    flex-shrink: 0;
+  }
+  
+  .about-us-details h1 {
+    font-size: 2vw;
+  }
+  
+  .about-us-details p {
+    font-size: 1vw;
+  }
+  
+  .about-us-details span {
+    color: #ffa36d;
+    font-style: oblique;
+  }
+
+
+
+
+
+
+.tools {
+    background-color: #ffa36d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top:100px;
+    padding-top: 20px;
+}
+.tools .tool-item {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: 180px;
+}
+
+
+.tools .tools-icon {
+    background-color: white;
+    color:  #ffa36d;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tools .tools-icon i {
+    font-size: 22px;
+}
+
+.tools .tools-details {
+    padding-top: 10px;
+}
+
+.tools .tools-details span {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tools .tools-details p {
+    font-size: 15px;
+}
+
+
+
+    
+    
+
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin:100px 0px;
+    
+}
+
+.statistics .statistics-item {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 250px;
+
+}
+
+.statistics .statistics-item .number {
+    font-size: 28px;
+    width: inherit;
+    align-self: left;
+    background-color: #e0e0e0;
+    height: inherit;
+    display:inherit;
+    align-items: inherit;
+    justify-content: center;
+}
+
+.statistics .statistics-item .detail {
+    font-size: 20px;
+    background-color: #f9f9f9;
+    width: inherit;
+    padding-top: 10px;
+   
+}
+
+.statistics .statistics-item .detail span {
+    font-size: 30px;
+}
