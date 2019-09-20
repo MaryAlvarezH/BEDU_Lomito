@@ -58,6 +58,86 @@
       "CodigoPostal": "02120",
       "Estado": "Distrito Federal",
       "id": 7
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 8
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 9
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 10
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Nayarit",
+      "id": 11
+    }
+  ],
+  "Pets-info": [
+    {
+      "LomitoName": "oslo",
+      "LomitoDate": "29/05/2018",
+      "LomitoDisease": "ninguna",
+      "LomitoSurgery": "ninguna",
+      "YearsWithyou": "1",
+      "AnimalEnergy": "mucha",
+      "HumanFriendly": "si",
+      "Specie": "perro",
+      "LomitoGender": "macho",
+      "LomitoSize": "mediano",
+      "id": "1"
+    },
+    {
+      "LomitoName": "jarocha la perrita mas bbonitA",
+      "LomitoDate": "1992-05-31",
+      "LomitoDisease": "SI,. TUVO CANCVER DE MATRIZ",
+      "LomitoSurgery": "SI, TUVieron que quitarle su matriz",
+      "YearsWithyou": "hace 7 años la amo",
+      "AnimalEnergy": "no mucha ,. ya que jarochita ya es un poco viejita",
+      "HumanFriendly": "si",
+      "Specie": "Perro",
+      "LomitoGender": "Hembra",
+      "LomitoSize": "Mediano",
+      "id": "r9ZIMvO"
     }
   ],
   "pets": [
