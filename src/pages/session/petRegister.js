@@ -5,30 +5,71 @@ class petRegister extends React.Component{
     constructor(props){
        super(props);
        this.state = {
-       LomitoName:'',
-       LomitoDate:'',
-       LomitoDisease:'',
-       LomitoSurgery:'',
-       YearsWithyou:'',
-       AnimalEnergy:'',
-       HumanFriendly:'',
-       Specie:'',
-       LomitoGender:'',
-       LomitoSize:''
+      //  LomitoName:'',
+      //  LomitoDate:'',
+      //  LomitoDisease:'',
+      //  LomitoSurgery:'',
+      //  YearsWithyou:'',
+      //  AnimalEnergy:'',
+      //  HumanFriendly:'',
+      //  Specie:'',
+      //  LomitoGender:'',
+      //  LomitoSize:''
+      name: String,
+      sort: String,
+      gender: String,
+      breed: String,
+      size: String,
+      temperament: String,
+      age: {
+          type: {
+              number: Number,
+              timePeriod: String,
+          }
+      },
+      hometown: String,
+      skills: [],
+      observations: [],
+      ownerId: {
+          type: /*ObjectId*/'',
+          ref: 'User'
+      },
+      status: {
+          type: String,
+          default: 'active'
+      }
+  
     
        };
-       this.guardarInfo = this.guardarInfo.bind(this);
-       this.procesar = this.procesar.bind(this);
-       this.LomitoName = this.LomitoName.bind(this);
-       this.LomitoDate = this.LomitoDate.bind(this);
-       this.LomitoDisease = this.LomitoDisease.bind(this);
-       this.LomitoSurgery = this.LomitoSurgery.bind(this);
-       this.YearsWithyou = this.YearsWithyou.bind(this);
-       this.AnimalEnergy = this.AnimalEnergy.bind(this);
-       this.HumanFriendly = this.HumanFriendly.bind(this);
-       this.Specie = this.Specie.bind(this);
-       this.LomitoGender = this.LomitoGender.bind(this);
-       this.LomitoSize = this.LomitoSize.bind(this);
+        this.guardarInfo = this.guardarInfo.bind(this);
+        this.name = this.name.bind(this);
+        this.sort = this.sort.bind(this);
+        this.gender = this.gender.bind(this);
+        this.breed = this.breed.bind(this);
+       this.size = this.size.bind(this);
+       this.temperament = this.temperament.bind(this);
+       this.age = this.age.bind(this);
+       this.hometown = this.hometown.bind(this);
+       this.skills = this.skills.bind(this);
+       this.observations = this.observations.bind(this);
+       this.ownerId = this.ownerId.bind(this);
+      
+
+      //this.guardarInfo = this.guardarInfo.bind(this);
+      //  this.procesar = this.procesar.bind(this);
+      //  this.LomitoName = this.LomitoName.bind(this);
+      //  this.LomitoDate = this.LomitoDate.bind(this);
+      //  this.LomitoDisease = this.LomitoDisease.bind(this);
+      //  this.LomitoSurgery = this.LomitoSurgery.bind(this);
+      //  this.temperament = this.YearsWithyou.bind(this);
+      //  this.AnimalEnergy = this.AnimalEnergy.bind(this);
+      //  this.HumanFriendly = this.HumanFriendly.bind(this);
+      //  this.Specie = this.Specie.bind(this);
+      //  this.LomitoGender = this.LomitoGender.bind(this);
+      //  this.LomitoSize = this.LomitoSize.bind(this);
+
+
+
     }
     
     //Formularios de los lomitos
@@ -45,26 +86,26 @@ class petRegister extends React.Component{
          <ul className="tabs-Lomito">
             <li>
                <label htmlFor="LomitoName"/>
-               <input type="text" value={this.state.LomitoName} 
-               onChange={this.LomitoName} 
+               <input type="text" value={this.state.name} 
+               onChange={this.name} 
                placeholder="Nombre del Lomito"/>
             </li>
             <li>
                <label htmlFor="LomitoDate"/>
-               <input type="date" value={this.state.LomitoDate}
-               onChange={this.LomitoDate}
+               <input type="date" value={this.state.sort}
+               onChange={this.sort}
                placeholder="Fecha de nacimiento del Lomito"/>
             </li>
             <li>
                <label htmlFor="LomitoDisease"/>
-               <input type="text" value={this.state.LomitoDisease}
-               onChange={this.LomitoDisease}
+               <input type="text" value={this.state.gender}
+               onChange={this.gender}
                placeholder="¿Tu lomito ha estado enfermo de algo, o padece una enfermedad cronica? Especifica"/>
             </li>
             <li>
                <label htmlFor="LomitoSurgery"/>
-               <input type="text" value={this.state.LomitoSurgery}
-               onChange={this.LomitoSurgery}
+               <input type="text" value={this.state.breed}
+               onChange={this.breed}
                placeholder="¿Tu lomito ha tenido alguna cirugia en su vida? Especifica"/> 
             </li>
             <li>
@@ -75,8 +116,8 @@ class petRegister extends React.Component{
             </li>
             <li>
                <label htmlFor="WithOthersAnimals"/>
-               <input type="text" value={this.state.WithOthersAnimals}
-               onChange={this.WithOthersAnimals} 
+               <input type="text" value={this.state.temperament}
+               onChange={this.temperament} 
                placeholder="¿Tienes algun otro lomito en casa? Especifica" />
             </li>
             <li>
@@ -124,8 +165,8 @@ class petRegister extends React.Component{
             
             <li>
                <label htmlFor="LomitoGender"/>
-               <select value={this.state.LomitoGender}
-               onChange={this.LomitoGender}
+               <select value={this.state.gender}
+               onChange={this.gender}
                placeholder="Genero">
                   <option value="no">Genero</option>
                   <option value="Macho">Macho</option>
@@ -139,8 +180,8 @@ class petRegister extends React.Component{
             
             <li>
                <label htmlFor="LomitoSize"/>
-               <select value ={this.state.LomitoSize}
-               onChange={this.LomitoSize}
+               <select value ={this.state.size}
+               onChange={this.size}
                placeholder="Tamaño">
                <option value="Mini">Mini (hasta 5kg)</option>
                <option value="Chico">Chico (6-10kg)</option>
@@ -166,7 +207,7 @@ class petRegister extends React.Component{
 //Funcion para el Guardado de la Info
 
     guardarInfo(){
-       fetch('http://localhost:4001/Pets-info',{
+       fetch('https://lomito-server.herokuapp.com/api/add-pet',{
           method:'POST',
           headers:{
              'Content-Type':'application/json'
@@ -193,60 +234,65 @@ class petRegister extends React.Component{
                      )*/
           this.guardarInfo()           
     }
-    LomitoName(e){
+    name(e){
        this.setState({
-          LomitoName: e.target.value
+          name: e.target.value
        })
     }
-    LomitoDate(e){
+    sort(e){
        this.setState({
-          LomitoDate: e.target.value
+          sort: e.target.value
           })
         }
-   LomitoDisease(e){
+   gender(e){
        this.setState({
-          LomitoDisease:e.target.value
+          gender:e.target.value
        })
     }
-    LomitoSurgery(e){
+    breed(e){
        this.setState({
-          LomitoSurgery: e.target.value
+          breed: e.target.value
        })
     }
     
-    YearsWithyou(e){
+    size(e){
        this.setState({
-          YearsWithyou: e.target.value
+          size: e.target.value
        })
     }
-    AnimalEnergy(e){
+    temperament(e){
        this.setState({
-          AnimalEnergy:e.target.value
+          temperament:e.target.value
        })
     }
         
-    HumanFriendly(e){
+    age(e){
        this.setState({
-          HumanFriendly:e.target.value
+          age:e.target.value
        })
     }
     
-    Specie(e){
+    hometown(e){
        this.setState({
-          Specie:e.target.value
+          hometown:e.target.value
        })
     }
     
-    LomitoGender(e){
+    skills(e){
        this.setState({
-          LomitoGender: e.target.value
+          skills: e.target.value
        })
     }
-    LomitoSize(e){
+    observations(e){
        this.setState({
-          LomitoSize:e.target.value
+          observations:e.target.value
        })
     }
+    ownerId(e){
+      this.setState({
+         ownerId:e.target.value
+      })
+   }
      }
     
      export default petRegister
