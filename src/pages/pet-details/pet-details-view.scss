@@ -145,3 +145,14 @@
 .fa-user {
   padding-top:10px;
 }
+
+.animal-icon {
+  height: 35px;
+  cursor: pointer;
+}
+
+.icon-container {
+  input[type="radio"][id^="cb"] {
+    display: none;
+  }
+}
