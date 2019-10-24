@@ -6,10 +6,10 @@ import Adopt from './pages/adopt/adopt';
 import SearchHome from './pages/searchHome/searchHome';
 import Footer from './shared/footer/footer';
 import PetDetails from './pages/pet-details/pet-details';
-import HumanRegister from './pages/session/humanRegister';
+import HumanRegister from './pages/session/human-register/humanRegister';
 import Login from './pages/login/login';
 import { UserContext } from './shared/user-context';
-import petRegister from './pages/session/petRegister';
+import petRegister from './pages/session/pet-register/petRegister';
 
 
 function App() {
