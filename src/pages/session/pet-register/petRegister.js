@@ -1,7 +1,7 @@
 import React,{ Component }  from 'react'
 import './pet-register.scss'
-import PetRegisterView from './PetRegisterView'
-import axios from 'axios';
+//import PetRegisterView from './PetRegisterView'
+
 
 class PetRegister extends Component {
   state ={    
@@ -156,25 +156,4 @@ class PetRegister extends Component {
          
       }
 }
-//end ponit connection 
-// const btnAddPet =  document.getElementsByClassName('btnAddPet') 
-// btnAddPet.addEventListener('click', () =>{
-    // axios({
-    // method:'POST',
-    // url: 'http://localhost:4001/Pets-info',
-    // data: {
-    //     name: this.state.name,
-    //     sort: this.state.sort,
-    //     gender: this.state.gender,
-    //     breed: this.state.breed,
-    //     size: this.state.size,
-    //     temperament: this.state.temperament,
-    //     age: this.state.age,
-    //     hometown: this.state.hometown,
-    //     skills: this.state.skills,
-    //     observations: this.state.observations
-    // }
-    // }).then(res => console.log(res))
-    // .cacth(err => console.log(err))
-// })   
 export default PetRegister

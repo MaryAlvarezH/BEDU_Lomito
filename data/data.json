@@ -203,6 +203,29 @@
       "email": "malvarez",
       "password": "zzz",
       "id": 32
+    },
+    {
+      "firstName": "magalli",
+      "lastName": "mejia",
+      "email": "step@gmail.com",
+      "password": "123",
+      "street": "lazaro",
+      "state": "mexico",
+      "zip": "54320",
+      "status": "mexico",
+      "id": 33
+    },
+    {
+      "firstName": "Magalli Stephanie",
+      "lastName": "Mejia Campos",
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "12345",
+      "street": "Calle 7 mz 57 Lt 16, Col. Valle de los Reyes",
+      "state": "Guanajuato",
+      "zip": "56430",
+      "status": "",
+      "confirmPassword": "12345",
+      "id": 34
     }
   ],
   "Pets-info": [

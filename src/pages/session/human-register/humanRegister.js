@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './human-register.scss'
+import { async } from 'q';
+import axios from 'axios';
 
 
 class HumanRegister extends Component{
@@ -8,17 +10,27 @@ state = {
    lastName:'',
    email:'',
    password:'',
-   confirmPassword:'',
    street:'',
    state:'',
    zip:'',
    status:''
     }
 
-    onSubmitHandler = (evt) => {
+    onSubmitHandler = async (evt) => {
       evt.preventDefault();
-      console.log(this.state);
+      //console.log(this.state);
+      try {
+         const result = await axios({
+             method:'POST',
+             //url: 'https://lomito-server.herokuapp.com/api/auth/signup',
+             url: 'http://localhost:4001/users',
+             data: this.state
+         })
+     } catch(err)
+     {console.log(err)}
+      
    }
+
    onChangeHandler = (evt) => {
       const {name, value} = evt.target
       this.setState({
@@ -62,11 +74,11 @@ state = {
             <input type="password" value={this.state.password} name="password" 
             onChange={this.onChangeHandler} placeholder="Contraseña"/>
          </li>
-         <li>
+         {/* <li>
             <label htmlFor="confirmPassword"></label>    
             <input type="password" value={this.state.confirmPassword} name="confirmPassword" 
             onChange={this.onChangeHandler} placeholder="Confirmar contraseña"/>
-         </li>
+         </li> */}
          <li>
             <label htmlFor="street"></label>          
             <input type="text" value={this.state.street} name="street" 
@@ -132,18 +144,6 @@ state = {
          </section> //hasta aqui va bien
 
             );
-         }
-      } 
-// guardarInfo(){
-//    fetch('http://localhost:4001/users',{
-//       method:'POST',
-//       headers:{
-//          'Content-Type':'application/json'
-//       },
-//       body:JSON.stringify(this.state)
-//    }) .then(console.log).catch(console.error)
-// }
-
-
-
+   }
+}
 export default HumanRegister
