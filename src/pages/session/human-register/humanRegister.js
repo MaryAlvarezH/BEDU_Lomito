@@ -5,30 +5,30 @@ import axios from 'axios';
 
 
 class HumanRegister extends Component{
-state = {
-   firstName:'',
-   lastName:'',
-   email:'',
-   password:'',
-   street:'',
-   state:'',
-   zip:'',
-   status:''
-    }
+   
+   state = {
+      firstName:'',
+      lastName:'',
+      email:'',
+      password:'',
+      street:'',
+      state:'',
+      zip:'',
+      status:''
+   }
 
-    onSubmitHandler = async (evt) => {
+   onSubmitHandler = async (evt) => {
       evt.preventDefault();
       //console.log(this.state);
       try {
          const result = await axios({
-             method:'POST',
-             //url: 'https://lomito-server.herokuapp.com/api/auth/signup',
-             url: 'http://localhost:4001/users',
-             data: this.state
+            method:'POST',
+            //url: 'https://lomito-server.herokuapp.com/api/auth/signup',
+            url: 'http://localhost:4001/users',
+            data: this.state
          })
-     } catch(err)
-     {console.log(err)}
-      
+   } catch(err) {console.log(err)}
+         
    }
 
    onChangeHandler = (evt) => {
@@ -38,13 +38,9 @@ state = {
       })
    }
 
-
-   
-
-
    render(){
       return(
-      <section className="container-humano">
+      <section className="container-humano" onSubmit= {this.evt}>
       <div className="flat-form">
         <h2>Registro Humano</h2>
         <p> Este es un Registro único para el humano
@@ -133,7 +129,10 @@ state = {
 
          </li>
          <li>
-         <input type='submit' value="Enviar Datos"/>
+         <input type='submit' 
+         value="Enviar Datos"
+         //onClick = {this.onSubmitHandler}
+         />
 
          </li>
          </ul>
