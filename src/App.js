@@ -9,8 +9,8 @@ import PetDetails from './pages/pet-details/pet-details';
 import HumanRegister from './pages/session/human-register/humanRegister';
 import Login from './pages/login/login';
 import { UserContext } from './shared/user-context';
-import petRegister from './pages/session/pet-register/petRegister';
-
+import petRegister from './pages/session/petRegister';
+import './App.scss'
 
 function App() {
 
@@ -34,7 +34,8 @@ function App() {
 
 
   return (
-    <UserContext.Provider value={state}>
+    <div class="panel-container">
+ <UserContext.Provider value={state}>
     <BrowserRouter>
       <Fragment>
         <Navbar></Navbar>
@@ -53,6 +54,8 @@ function App() {
       </Fragment>
     </BrowserRouter>
     </UserContext.Provider>
+    </div>
+   
    
   );
 }
