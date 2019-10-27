@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './previewCard.scss'
+import imageDefault from '../../../assets/images/pet-default.png'
 
 function PreviewCard(props) {
     return(
@@ -17,8 +18,13 @@ function PreviewCard(props) {
         className="card-link">
             <div className="card-pet">
             <h2>{props.name}</h2>
-            <img className="item-image" src={props.imageURL}></img>
+               { props.imageURL && <img className="item-image" src={props.imageURL}></img>}
+               { !props.imageURL && <img className="item-image default" src={imageDefault}></img>}
+            
+            {/* <img className="item-image" src={props.imageURL}></img> */}
             <div className="pet-details">
+                <div className="item">Especie:</div>
+                <div className="item-detail">{props.sort}</div>
                 <div className="item">Genero:</div>
                 <div className="item-detail">{props.gender}</div>
                 <div className="item">Tamaño:</div>
