@@ -37,20 +37,15 @@ state = {
       [name]: value
       })
    }
-
-
    
-
-
    render(){
       return(
       <section className="container-humano">
       <div className="flat-form">
-        <h2>Registro Humano</h2>
-        <p> Este es un Registro único para el humano
-            que va a dar en adopcion o adoptar, ya que los datos
-            son importantes para otros humanos
-         </p>
+        <h2>Registarse</h2>
+        <p> 
+           Para poder solicitar un lomito en adopción o bien buscar un nuevo hogar para tu mascota es necesario registarte.
+        </p>
          <form onSubmit ={this.onSubmitHandler}>
             <ul className="tabs">
          <li>

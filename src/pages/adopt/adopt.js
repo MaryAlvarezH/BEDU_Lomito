@@ -12,7 +12,6 @@ class Adopt extends Component {
     async componentDidMount() {
         const { data: pets, status } = await this.handleData();
         console.log('pets',pets);
-        console.log('status',status);
 
         if (!OKcodes.includes(status)) {
             console.error('Error al traer los datos');
@@ -22,9 +21,7 @@ class Adopt extends Component {
     }
 
     handleData = (method = 'GET', model = 'pets') => {
-        // let url = `/${model}`;
         let url = `${URL}${model}/all`
-
         return axiosInstance[method.toLowerCase()](`${url}`)
     }
 

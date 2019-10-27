@@ -36,10 +36,10 @@ showDropdownMenu(event) {
 
           { this.state.displayMenu ? (
           <ul className="drop">
-            <li><NavLink exact to="/login" activeClassName="is-selected">registro</NavLink></li>
-            <li><a href="#sesion">olvide mi contraseña!</a></li>
-            <li><NavLink exact to="/human-register" activeClassName="is-selected">registro humano</NavLink></li>
-            <li><NavLink exact to ="/pet-register" activeClassName="is-selected">registro Lomito</NavLink>    </li>
+            <li><NavLink exact to="/login" activeClassName="is-selected">Iniciar sesión</NavLink></li>
+            {/* <li><a href="#sesion">olvide mi contraseña!</a></li> */}
+            <li><NavLink exact to="/human-register" activeClassName="is-selected">Registarse</NavLink></li>
+            {/* <li><NavLink exact to ="/pet-register" activeClassName="is-selected">registro Lomito</NavLink>    </li> */}
           </ul>
         ):
         (

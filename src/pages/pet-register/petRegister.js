@@ -40,16 +40,13 @@ class PetRegister extends Component {
       }
 
       
-      
       render() { 
          return (
-         //<PetRegisterView/>
          <section className="container-pet">
             <div className="flat-form-lomito">
-            <h2>Registro Lomito</h2>
-            <p> Este es el Registro único más importante, ya que
-                son los datos recopilados del lomito que se dara en adopción.
-                Esta información es importante para otros Humanos.
+            <h2>Registra a tu Lomito</h2>
+            <p> Si estas buscando un nuevo hogar para tu Lomito, aquí podrás crear
+                su perfil, para que otras personas puedan conocerlo.
             </p>
         <form onSubmit ={this.onSubmitHandler}> {/*cambiar el nombre*/}
         <ul className="tabs-Lomito">
@@ -87,8 +84,6 @@ class PetRegister extends Component {
             <input type="text" value={this.state.skills} name="skills"
             onChange={this.onChangeHandler}
             placeholder="¿Qué habilidades tiene tu lomito?"/>
-
-
             </li>
         
             <li>
@@ -101,17 +96,10 @@ class PetRegister extends Component {
                 <option value="Perro">Perro</option>
                 <option value="Gato">Gato</option>   
                 <option value="Roedor">Roedor</option>   
-                <option value="Reptil">Reptil</option>
-                <option value="Anfibio">Anfibio</option>
-                <option value="Pez">Pez</option>
-                <option value="Ave">Ave</option>                     
-                <option value="Otro">Otro</option>   
-            
+                <option value="Ave">Ave</option> 
                 </select>
 
             </li>
-
-            
             <li>
             <label htmlFor="observations"/>
             <select name="observations"
