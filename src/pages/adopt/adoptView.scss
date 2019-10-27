@@ -73,37 +73,6 @@
         } 
     }
     
-    // .radio-button-group {
-    //     margin: 0 15px 5px 15px;
-    //     input {
-    //         display: none;
-    //     }
-    //     label {
-    //         position: relative;
-    //         cursor: pointer;
-    //     }
-    //     label:before {
-    //         content:'';
-    //         border: 2px solid $color1;
-    //         padding: 7px;
-    //         display: inline-block;
-    //         vertical-align: middle;
-    //         cursor: pointer;
-    //         margin-right: 5px;
-    //       }
-    //       input:checked + label:after {
-    //         content: '';
-    //         border: solid $color1;
-    //         border-width: 0 1.5px 1.5px 0;
-    //         position: absolute;
-    //         transform: rotate(45deg);
-    //         top: 5px;
-    //         left: 6px;
-    //         width: 5px;
-    //         height: 8px;
-    //       }
-    // }
-
         .radio-button-group {
             .radio {
                display: block;

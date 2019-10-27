@@ -20,8 +20,6 @@ function PreviewCard(props) {
             <h2>{props.name}</h2>
                { props.imageURL && <img className="item-image" src={props.imageURL}></img>}
                { !props.imageURL && <img className="item-image default" src={imageDefault}></img>}
-            
-            {/* <img className="item-image" src={props.imageURL}></img> */}
             <div className="pet-details">
                 <div className="item">Especie:</div>
                 <div className="item-detail">{props.sort}</div>
