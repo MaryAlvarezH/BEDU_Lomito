@@ -23,8 +23,8 @@ class HumanRegister extends Component{
       try {
          const result = await axios({
             method:'POST',
-            //url: 'https://lomito-server.herokuapp.com/api/auth/signup',
-            url: 'http://localhost:4001/users',
+            url: 'https://lomito-server.herokuapp.com/api/auth/signup',
+            //url: 'http://localhost:4001/users',
             data: this.state
          })
    } catch(err) {console.log(err)}
