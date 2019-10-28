@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .applicants-panel {
     margin: 20px 60px;
     padding: 30px;
@@ -5,8 +7,9 @@
     border-radius: 10px;
     color: #546464;
 
-    .title {
-        margin: 15px 0;
+    .title {         
+        margin-top: 15px;
+        margin-bottom: 30px;
         font-size: 22px;
         font-weight: 600;
     }
@@ -35,6 +38,8 @@
 
         .pet-name {
             font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         p {
@@ -50,7 +55,7 @@
         width: 100%;
         margin: 10px 0;
         display: grid;
-        grid-template-columns: 0.5fr repeat(2,1.5fr) 2fr 2fr 1fr;
+        grid-template-columns: 0.5fr repeat(2,1fr) 2fr 2fr 1fr;
         color: $color;
     }
 
@@ -77,4 +82,26 @@
     justify-content: flex-end;
     align-items: center;
     margin-top: 20px;
+
+    @mixin btn-option($color) {
+        background-color:$color;
+        color: white;
+        height: 36px;
+        border-color: transparent;
+        border-radius: 5px;
+        margin: 0 5px;
+        padding: 3px 8px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .btn-cancel{
+        @include btn-option(#b6b6b6)
+    }
+    .btn-adopted{
+        @include btn-option($color1)
+    }
+    button:focus{
+        outline: none;
+    }
 }

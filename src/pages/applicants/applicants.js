@@ -8,9 +8,7 @@ function Applicants(props) {
 
     React.useEffect(() => {
         handleDataByUser().then(data=> {
-            console.log('data', data);
             setApplicants(data)
-            console.log('aplicants',applicants);
         });
     }, []); 
 
@@ -23,11 +21,8 @@ function Applicants(props) {
         <div className="applicants-panel">
             <div className="title">Solicitudes de adopción</div>
             {
-                  applicants && applicants.length>0 && applicants.map(application => {
-                    return (
-                        <ApplicantCard application={application}></ApplicantCard>
-                    )
-                })
+                applicants && applicants.length>0 &&
+                    <ApplicantCard applicants={applicants} handleDataByUser={handleDataByUser}></ApplicantCard>
             }
         </div>
     )
