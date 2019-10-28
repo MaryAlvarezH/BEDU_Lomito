@@ -1,7 +1,7 @@
-import React, {Component,Fragment} from 'react'
+import React, {Component} from 'react'
 import PetDetailsView from './pet-details-View';
-import { axiosInstance } from '../../shared/helpers';
-import { URL } from '../../environments/environment';
+// import { axiosInstance } from '../../shared/helpers';
+// import { URL } from '../../environments/environment';
 
 class PetDetails extends Component{
     state = {

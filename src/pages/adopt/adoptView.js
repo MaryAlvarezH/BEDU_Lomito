@@ -1,4 +1,4 @@
-import React, { useState, Component, Fragment } from 'react';
+import React, { useState } from 'react';
 import './adoptView.scss';
 import PreviewCard from './previewCard/previewCard';
 import dogIcon from '../../assets/images/animal-icons/dog.png'
@@ -45,12 +45,12 @@ function AdoptView(props) {
     const filterByProperty = (property, value) => {
         let filterPetList;
         filterPetList = pets.data.filter(pet => 
-            pet[property].toLowerCase() == value.toLowerCase()
+            pet[property].toLowerCase() === value.toLowerCase()
         );
 
         if (filter[property] !== '') {
             filterPetList = originalPetList.filter(pet => 
-                pet[property].toLowerCase() == value.toLowerCase()
+                pet[property].toLowerCase() === value.toLowerCase()
             );
         }
         setPets({data:filterPetList})
@@ -62,6 +62,8 @@ function AdoptView(props) {
             pet.name.toLowerCase().includes(word.toLowerCase()) ||
             pet.sort.toLowerCase().includes(word.toLowerCase()) ||
             pet.breed.toLowerCase().includes(word.toLowerCase()) ||
+            pet.size.toLowerCase().includes(word.toLowerCase()) ||
+            pet.gender.toLowerCase().includes(word.toLowerCase()) ||
             pet.temperament.toLowerCase().includes(word.toLowerCase())
         );
         setPets({data:filterPetList})
@@ -93,10 +95,11 @@ function AdoptView(props) {
                             value="perro"
                             name="sort"
                             checked={filter.sort === "perro"}
-                            onClick={handleChange}/>
+                            onChange={handleChange}/>
                         <img 
                             src={dogIcon} 
-                            className="animal-icon"/>
+                            className="animal-icon"
+                            alt="perro"/>
                     </label>
                     <label>
                         <input 
@@ -104,10 +107,11 @@ function AdoptView(props) {
                             value="gato"
                             name="sort"
                             checked={filter.sort === "gato"}
-                            onClick={handleChange}/>
+                            onChange={handleChange}/>
                         <img 
                             src={catIcon} 
-                            className="animal-icon"/>
+                            className="animal-icon"
+                            alt="gato"/>
                     </label>
                     <label>
                         <input 
@@ -115,10 +119,11 @@ function AdoptView(props) {
                             value="roedor"
                             name="sort"
                             checked={filter.sort === "roedor"}
-                            onClick={handleChange}/>
+                            onChange={handleChange}/>
                         <img 
                             src={rodentIcon} 
-                            className="animal-icon"/>
+                            className="animal-icon"
+                            alt="roedor"/>
                     </label>
                     <label>
                         <input 
@@ -126,10 +131,11 @@ function AdoptView(props) {
                             value="ave"
                             name="sort"
                             checked={filter.sort === "ave"}
-                            onClick={handleChange}/>
+                            onChange={handleChange}/>
                         <img 
                             src={birdIcon} 
-                            className="animal-icon"/>
+                            className="animal-icon"
+                            alt="ave"/>
                     </label>
                 </div>
                 {/* size */}
@@ -137,53 +143,53 @@ function AdoptView(props) {
                     <h3>Tamaño</h3>
                 </div>
                 <div className="radio-button-group">
-                    <label class="radio">Mini
+                    <label className="radio">Mini
                         <input 
                             name="size"
                             type="radio"
                             value = "mini"
                             checked={filter.size === "mini"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio">Chico
+                    <label className="radio">Chico
                         <input 
                             name="size"
                             type="radio"
                             value = "chico"
                             checked={filter.size === "chico"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio"> Mediano
+                    <label className="radio"> Mediano
                         <input 
                             name="size"
                             type="radio"
                             value = "mediano"
                             checked={filter.size === "mediano"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio">Grande
+                    <label className="radio">Grande
                         <input 
                             name="size"
                             type="radio"
                             value = "grande"
                             checked={filter.size === "grande"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
-                    <label class="radio">Gigante
+                    <label className="radio">Gigante
                         <input 
                             name="size"
                             type="radio"
                             value = "gigante"
                             checked={filter.size === "gigante"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
                 </div>
               
@@ -192,24 +198,24 @@ function AdoptView(props) {
                     <h3>Género</h3>
                 </div>
                 <div className="radio-button-group">
-                    <label class="radio">Hembra
+                    <label className="radio">Hembra
                         <input 
                             name="gender"
                             type="radio"
                             value="hembra"
                             checked={filter.gender === "hembra"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio">Macho
+                    <label className="radio">Macho
                         <input 
                             name="gender"
                             type="radio"
                             value="macho"
                             checked={filter.gender === "macho"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
                 </div>
                 
@@ -218,41 +224,41 @@ function AdoptView(props) {
                     <h3>Temperamento</h3>
                 </div>
                 <div className="radio-button-group">
-                    <label class="radio">Tranquilo
+                    <label className="radio">Tranquilo
                         <input 
                             name="temperament"
                             type="radio"
                             value="tranquilo"
                             checked={filter.temperament === "tranquilo"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio">Activo
+                    <label className="radio">Activo
                         <input 
                             name="temperament"
                             type="radio"
                             value="activo"
                             checked={filter.temperament === "activo"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
 
-                    <label class="radio">Sociable
+                    <label className="radio">Sociable
                         <input 
                             name="temperament"
                             type="radio"
                             value="sociable"
                             checked={filter.temperament === "sociable"}
                             onChange={handleChange}/>
-                        <span class="checkround"></span>
+                        <span className="checkround"></span>
                     </label>
                 </div>
             </div>
 
 
-            <div class="general-panel">
-                <div class="filter-legend">
+            <div className="general-panel">
+                <div className="filter-legend">
                     <span onClick={handleLegendClick}>Todos</span>
                 </div>
                 <div className="card-container">

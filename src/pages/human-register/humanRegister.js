@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './human-register.scss'
-import { async } from 'q';
 import axios from 'axios';
-
+// import { async } from 'q';
 
 class HumanRegister extends Component{
 state = {
@@ -26,6 +25,7 @@ state = {
              url: 'http://localhost:4001/users',
              data: this.state
          })
+         console.log('result', result);
      } catch(err)
      {console.log(err)}
       

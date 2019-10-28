@@ -6,13 +6,13 @@ import './pet-details-view.scss'
 
 function PetDetailsView(props){
     const [pet, setPet] = React.useState({});
-    const [activity, setActivity] = React.useState({
-        userId: '',
-        petId: '',
-        like: '',
-        registeredAt:'',
-        text:''
-    });
+    // const [activity, setActivity] = React.useState({
+    //     userId: '',
+    //     petId: '',
+    //     like: '',
+    //     registeredAt:'',
+    //     text:''
+    // });
    
     React.useEffect(() => {
         if (props.petDetails) {
@@ -27,38 +27,59 @@ function PetDetailsView(props){
                 console.log('pet',pet)
             })
         }
-    },[pet.id])
+    },[pet]);
 
     const handleDataByPet = async(id) =>{
         const {data} = await axiosInstance.get(`/pets/details/${id}`);
         return data
     }
 
-    const handleAddCommentClick =() => {
-        console.log('activity',activity)
-        setActivity({
-            ...activity,
-            userId:1,
-            petId: pet.id,
-            like:false,
-            registeredAt: new Date().getDate()
-        })
+    const handleAdoption = async(id) => {
+        const body = {
+            petId: pet._id,
+            applicants: [{userId: "5db4dfc9b3f7061147a492db"}]
+        }
+        // "5db4dfc9b3f7061147a492db"
+        const {data} = await axiosInstance.post(`/adoption/add-applicant`, body);
+        return data
     }
 
-    const handleCommentChange = (e) => {
-        setActivity({...activity, text:e.target.value})
-        console.log('activity',activity)
+    const onClickAdopt = async() => {
+        const adoption = await handleAdoption();
+        console.log('result',adoption);
+        if (adoption && adoption.message) {
+            setPet({...props.petDetails, reqAdoptionStatus: adoption.message})
+        } else if (adoption) {
+            setPet({...props.petDetails, reqAdoptionStatus: 'success'})
+        }
+
     }
+
+    // const handleAddCommentClick =() => {
+    //     console.log('activity',activity)
+    //     setActivity({
+    //         ...activity,
+    //         userId:1,
+    //         petId: pet.id,
+    //         like:false,
+    //         registeredAt: new Date().getDate()
+    //     })
+    // }
+
+    // const handleCommentChange = (e) => {
+    //     setActivity({...activity, text:e.target.value})
+    //     console.log('activity',activity)
+    // }
     
     return(
-        <div class="panel-container">
+        <div className="panel-container">
             <section className="info-pet-details">
                 <div className="card-full-details">
                     <h2>{pet.name}</h2>
                     <div className="general-full-details">
                         <div className="image-full-details">
-                        { pet.imageURL && <img className="pet-image" src={pet.imageURL}></img>}
-                        { !pet.imageURL && <img className="pet-image default" src={imageDefault}></img>}
+                        { pet.imageURL && <img className="pet-image" src={pet.imageURL} alt="lomito"></img>}
+                        { !pet.imageURL && <img className="pet-image default" src={imageDefault} alt="lomito"></img>}
                         </div>
                         <div className="description-full-details">
                             <div className="item-detail">
@@ -121,10 +142,19 @@ function PetDetailsView(props){
                             }
                         
                             <div className="card-pet-options">
-                                {/* <button type="submit" className="btn-like"><i className="fa fa-heart"></i></button>
-                                <button type="submit" className="btn-comment"><i className="fa fa-comments"></i></button> */}
-                                <button type="submit" className="btn-adopt">Solicitar adopción</button>
-                                {/* <span className="status-legend">Solicitud enviada, espera a que el dueño se comunique contigo.</span> */}
+                                { 
+                                    pet.reqAdoptionStatus === 'applicant already exist' &&
+                                    <span className="status-legend">Ya se ha enviado una solicitud de esta mascota.</span>
+                                }
+                                {
+                                    pet.reqAdoptionStatus === 'success' &&
+                                    <span className="status-legend">Solicitud enviada, espera a que el dueño se comunique contigo.</span>
+                                    
+                                }
+                                {
+                                    !pet.reqAdoptionStatus && 
+                                    <button type="submit" className="btn-adopt" onClick={onClickAdopt}>Solicitar adopción</button>
+                                }
                             </div>
                         </div>
                     
