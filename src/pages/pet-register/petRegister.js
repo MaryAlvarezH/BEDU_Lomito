@@ -26,6 +26,7 @@ class PetRegister extends Component {
                 url: 'https://lomito-server.herokuapp.com/api/pets/add-pet',
                 //url: 'http://localhost:4001/Pets-info',
                 data: this.state
+                console.log(this.state)
             })
         } catch(err)
         {console.log(err)}
