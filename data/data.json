@@ -58,6 +58,244 @@
       "CodigoPostal": "02120",
       "Estado": "Distrito Federal",
       "id": 7
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 8
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 9
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Chiapas",
+      "id": 10
+    },
+    {
+      "Nombres": "hola ",
+      "Apellidos": "me llamo popo",
+      "date": "1992-05-29",
+      "Email": "jobroman8888@gnail.com",
+      "Contraseña": "sandra1234",
+      "ConfirmarContraseña": "sandra1234",
+      "Telefono": "5565676767",
+      "Direccion": "postal 1000000",
+      "CodigoPostal": "03410",
+      "Estado": "Nayarit",
+      "id": 11
+    },
+    {
+      "password": "",
+      "id": 12
+    },
+    {
+      "password": "",
+      "id": 13
+    },
+    {
+      "password": "",
+      "id": 14
+    },
+    {
+      "password": "",
+      "id": 15
+    },
+    {
+      "password": "",
+      "id": 16
+    },
+    {
+      "password": "",
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "password": "",
+      "id": 19
+    },
+    {
+      "password": "",
+      "id": 20
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "",
+      "id": 21
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 22
+    },
+    {
+      "password": "",
+      "id": 23
+    },
+    {
+      "password": "",
+      "id": 24
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 25
+    },
+    {
+      "email": "MAGS",
+      "password": "1234",
+      "id": 26
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 27
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 28
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 29
+    },
+    {
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "1234",
+      "id": 30
+    },
+    {
+      "email": "lisset",
+      "password": "12345",
+      "id": 31
+    },
+    {
+      "email": "malvarez",
+      "password": "zzz",
+      "id": 32
+    },
+    {
+      "firstName": "magalli",
+      "lastName": "mejia",
+      "email": "step@gmail.com",
+      "password": "123",
+      "street": "lazaro",
+      "state": "mexico",
+      "zip": "54320",
+      "status": "mexico",
+      "id": 33
+    },
+    {
+      "firstName": "Magalli Stephanie",
+      "lastName": "Mejia Campos",
+      "email": "stephanie.mejia.22@hotmail.com",
+      "password": "12345",
+      "street": "Calle 7 mz 57 Lt 16, Col. Valle de los Reyes",
+      "state": "Guanajuato",
+      "zip": "56430",
+      "status": "",
+      "confirmPassword": "12345",
+      "id": 34
+    }
+  ],
+  "Pets-info": [
+    {
+      "LomitoName": "oslo",
+      "LomitoDate": "29/05/2018",
+      "LomitoDisease": "ninguna",
+      "LomitoSurgery": "ninguna",
+      "YearsWithyou": "1",
+      "AnimalEnergy": "mucha",
+      "HumanFriendly": "si",
+      "Specie": "perro",
+      "LomitoGender": "macho",
+      "LomitoSize": "mediano",
+      "id": "1"
+    },
+    {
+      "LomitoName": "jarocha la perrita mas bbonitA",
+      "LomitoDate": "1992-05-31",
+      "LomitoDisease": "SI,. TUVO CANCVER DE MATRIZ",
+      "LomitoSurgery": "SI, TUVieron que quitarle su matriz",
+      "YearsWithyou": "hace 7 años la amo",
+      "AnimalEnergy": "no mucha ,. ya que jarochita ya es un poco viejita",
+      "HumanFriendly": "si",
+      "Specie": "Perro",
+      "LomitoGender": "Hembra",
+      "LomitoSize": "Mediano",
+      "id": "r9ZIMvO"
+    },
+    {
+      "id": "YWbARD5"
+    },
+    {
+      "id": "x53fATs"
+    },
+    {
+      "id": "cVSODA_"
+    },
+    {
+      "function (partialState, callback) {\n      !(typeof partialState ": "== 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;\n      this.updater.enqueueSetState(this, partialState, callback, 'setState');\n    }",
+      "id": "JA0PiWo"
+    },
+    {
+      "function (partialState, callback) {\n      !(typeof partialState ": "== 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;\n      this.updater.enqueueSetState(this, partialState, callback, 'setState');\n    }",
+      "id": "-92oU_U"
+    },
+    {
+      "function (partialState, callback) {\n      !(typeof partialState ": "== 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;\n      this.updater.enqueueSetState(this, partialState, callback, 'setState');\n    }",
+      "id": "m7Qe4vB"
+    },
+    {
+      "function (partialState, callback) {\n      !(typeof partialState ": "== 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;\n      this.updater.enqueueSetState(this, partialState, callback, 'setState');\n    }",
+      "id": "VUHUZ3F"
+    },
+    {
+      "function (partialState, callback) {\n      !(typeof partialState ": "== 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;\n      this.updater.enqueueSetState(this, partialState, callback, 'setState');\n    }",
+      "id": "Esv4FIr"
+    },
+    {
+      "name": "Lola",
+      "sort": "Perro",
+      "gender": "",
+      "breed": "no",
+      "size": "Grande",
+      "temperament": "alegre",
+      "age": "2019-02-22",
+      "hometown": "",
+      "skills": "amable",
+      "observations": "Macho",
+      "id": "3ECjF6E"
     }
   ],
   "pets": [

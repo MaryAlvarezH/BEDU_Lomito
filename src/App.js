@@ -1,15 +1,17 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter,Route} from 'react-router-dom'
-import Navbar from './shared/navbar/navbar';
+import { UserContext } from './shared/user-context';
+import Navbar from './shared/navbar/bar/navbar';
 import Home from './pages/home/home';
 import Adopt from './pages/adopt/adopt';
-import SearchHome from './pages/searchHome/searchHome';
-import Footer from './shared/footer/footer';
+import HumanRegister from './pages/human-register/humanRegister';
+import PetRegister from './pages/pet-register/petRegister';
 import PetDetails from './pages/pet-details/pet-details';
-import HumanRegister from './pages/session/humanRegister';
+import Footer from './shared/footer/footer';
 import Login from './pages/login/login';
-import { UserContext } from './shared/user-context';
+import Applicants from './pages/applicants/applicants';
 
+import './App.scss'
 
 function App() {
 
@@ -29,26 +31,25 @@ function App() {
     loggedIn: false,
   });
 
-
-
-
   return (
+    <div className="panel-container">
     <UserContext.Provider value={state}>
-    <BrowserRouter>
-      <Fragment>
-        <Navbar></Navbar>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/adopt" component={Adopt}></Route>
-        <Route exact path="/pet-detail" component={PetDetails}></Route>
-        <Route exact path="/search-home" component={SearchHome}></Route>
-        <Route exact path="/human-register" component={HumanRegister}></Route>
-        {/* <Route exact path="/pet-register" component={HumanRegister}></Route> */}
-        <Route exact path="/login" component={Login} setState={setState}></Route>
-        <Footer></Footer>
-      
-      </Fragment>
-    </BrowserRouter>
-    </UserContext.Provider>
+        <BrowserRouter>
+          <Fragment>
+            <Navbar></Navbar>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/adopt" component={Adopt}></Route>
+            <Route exact path="/pet-detail" component={PetDetails}></Route>
+            <Route exact path="/human-register" component={HumanRegister}></Route>
+            <Route exact path="/pet-register" component={PetRegister}></Route>
+            <Route exact path="/login" component={Login} setState={setState}></Route>
+            <Route exact path="/applicants" component={Applicants}></Route>
+            <Footer></Footer>
+          </Fragment>
+        </BrowserRouter>
+        </UserContext.Provider>
+    </div>
+   
    
   );
 }

@@ -1,30 +1,28 @@
-import React, {Component,Fragment} from 'react'
+import React, {Component} from 'react'
 import PetDetailsView from './pet-details-View';
-import { axiosInstance } from '../../shared/helpers';
+// import { axiosInstance } from '../../shared/helpers';
+// import { URL } from '../../environments/environment';
 
 class PetDetails extends Component{
     state = {
         activities: []
     }
 
-
-    
-
     async componentDidMount() {
         // console.log('pet-detail', this.props)
-        const { data: activities, status} = await this.handleData()
-        this.setState( {activities} );
+        // const { data: activities, status} = await this.handleData()
+        // this.setState( {activities} );
     }
 
     handleData = (data, method = 'GET', model = 'activity') => {
-        let body = {};
-        let url = `/${model}`;
+        // let body = {};
+        // let url = `/${model}`;
     
-        if (method === 'POST') {
-          body = data
-        }
+        // if (method === 'POST') {
+        //   body = data
+        // }
     
-        return axiosInstance[method.toLowerCase()](`${url}`, body)
+        // return axiosInstance[method.toLowerCase()](`${url}`, body)
     }
 
     render(){
