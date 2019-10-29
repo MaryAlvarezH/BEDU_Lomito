@@ -1,9 +1,6 @@
 import React from 'react';
-import { auth } from '../../shared/auth';
 import './login.scss'
-//import React {useState} from 'react';
 import { UserContext } from '../../shared/user-context';
-import { compileFunction } from 'vm';
 import axios from 'axios';
 
 function Login(props) {
@@ -84,7 +81,7 @@ function Login(props) {
                                 <br/><br/>
                             
                         
-                                <a href="#" className="ForgetPwd">Olvidaste tu contraseña?</a>
+                                {/* <a href="#" className="ForgetPwd">Olvidaste tu contraseña?</a> */}
                             
                         </form>
                         </div>

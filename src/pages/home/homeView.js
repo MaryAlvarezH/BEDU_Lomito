@@ -33,7 +33,7 @@ function HomeView(props) {
             </section>
             <section className="about-us">
                 <div className="about-us-image">
-                    <img src={imageAboutUs}/>
+                    <img src={imageAboutUs} alt="Sobre nosotros"/>
                 </div>
                 <div className="about-us-details">
                     <h1 className="font-theme">Acerca de nosotros</h1>
@@ -88,21 +88,21 @@ function HomeView(props) {
             </section>
             <section className="statistics">
                 <div className="statistics-item">
-                <img src={imageStatistic} width="350px" height="120px"/>
+                <img src={imageStatistic} width="350px" height="120px" alt="stat1"/>
                     <div className="detail">
                         <span>28 000 000</span>
                         <p>De perros y gatos en México</p>
                     </div>
                 </div>
                 <div className="statistics-item">
-                <img src={imageStatistic} width="350px" height="120px"/>
+                <img src={imageStatistic} width="350px" height="120px" alt="stat2"/>
                     <div className="detail">
                         <span>70%</span>
                         <p>Se encuentran en situación de calle</p>
                     </div>
                 </div>
                 <div className="statistics-item">
-                <img src={imageStatistic} width="350px" height="120px"/>
+                <img src={imageStatistic} width="350px" height="120px" alt="stat3"/>
                     <div className="detail">
                         <span>35%</span>
                         <p>Encuentran un nuevo hogar</p>

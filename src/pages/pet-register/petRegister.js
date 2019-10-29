@@ -27,6 +27,8 @@ class PetRegister extends Component {
                 //url: 'http://localhost:4001/Pets-info',
                 data: this.state
             })
+
+            console.log(result)
         } catch(err)
         {console.log(err)}
          
