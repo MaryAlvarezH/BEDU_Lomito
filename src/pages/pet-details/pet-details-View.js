@@ -24,10 +24,9 @@ function PetDetailsView(props){
             const id  = props.location.search.split('=')[1];
             handleDataByPet(id).then((petData)=> {
                 setPet(petData);
-                console.log('pet',pet)
             })
         }
-    },[pet]);
+    },[]);
 
     const handleDataByPet = async(id) =>{
         const {data} = await axiosInstance.get(`/pets/details/${id}`);
@@ -37,7 +36,7 @@ function PetDetailsView(props){
     const handleAdoption = async(id) => {
         const body = {
             petId: pet._id,
-            applicants: [{userId: "5db4dfc9b3f7061147a492db"}]
+            applicants: [{userId: "5db7d33ea8e050001767cedb"}]
         }
         // "5db49c57d7cb7303fe3d254d"
         const {data} = await axiosInstance.post(`/adoption/add-applicant`, body);
@@ -52,7 +51,6 @@ function PetDetailsView(props){
         } else if (adoption) {
             setPet({...props.petDetails, reqAdoptionStatus: 'success'})
         }
-
     }
 
     // const handleAddCommentClick =() => {
