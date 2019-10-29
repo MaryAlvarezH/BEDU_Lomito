@@ -47,7 +47,17 @@
       display: grid;
       grid-template-columns: 2fr 3fr;
       grid-gap: 0 20px;
+      text-transform: capitalize;
     }
+
+    .pet-name {
+      text-transform: capitalize;
+    }
+
+    .age {
+      text-transform: lowercase !important;
+    }
+    
     span {
       font-weight: 600;
     }

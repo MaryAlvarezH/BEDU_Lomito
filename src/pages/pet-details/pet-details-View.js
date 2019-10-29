@@ -39,7 +39,7 @@ function PetDetailsView(props){
             petId: pet._id,
             applicants: [{userId: "5db4dfc9b3f7061147a492db"}]
         }
-        // "5db4dfc9b3f7061147a492db"
+        // "5db49c57d7cb7303fe3d254d"
         const {data} = await axiosInstance.post(`/adoption/add-applicant`, body);
         return data
     }
@@ -75,7 +75,7 @@ function PetDetailsView(props){
         <div className="panel-container">
             <section className="info-pet-details">
                 <div className="card-full-details">
-                    <h2>{pet.name}</h2>
+                    <h2 className="pet-name">{pet.name}</h2>
                     <div className="general-full-details">
                         <div className="image-full-details">
                         { pet.imageURL && <img className="pet-image" src={pet.imageURL} alt="lomito"></img>}
@@ -98,10 +98,18 @@ function PetDetailsView(props){
                                 <span>Raza:</span>
                                 <p>{pet.breed}</p>
                             </div>
-                            {pet.age && pet.age.number && pet.age.timePeriod && 
+                            {
+                                pet.age && pet.age.number && pet.age.timePeriod &&
                                 <div className="item-detail">
                                     <span>Edad:</span>
-                                    <p>{`${pet.age.number} ${pet.age.timePeriod}(s)`} </p>
+                                    <p className="age">
+                                    {`${pet.age.number} ${pet.age.timePeriod === "mes" && pet.age.number>1 ? "meses" : 
+                                                        `${pet.age.timePeriod === "mes" && pet.age.number<=1 ? "mes" :
+                                                        `${pet.age.timePeriod === "año" && pet.age.number>1 ? "años" :
+                                                        `${pet.age.timePeriod === "año" && pet.age.number<=1 ? "año" : ''
+                                                        }`}`}`}
+                                    `}
+                                    </p>
                                 </div>
                             }
                             <div className="item-detail">
