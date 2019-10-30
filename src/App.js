@@ -18,22 +18,22 @@ function App() {
   // const UserAccessContext = React.createContext();
   //  const setLoggedIn = status => setState({...state, status})
 
-  const setLoggedIn = (userName, loggedIn) => {
-    console.log('soy App y estan cambiando mi estado!')
-    console.log('entran ',userName,loggedIn)
-    setState({...state,userName,loggedIn})
-    console.log(state)
-  }
+  // const setLoggedIn = (userName, loggedIn) => {
+  //   console.log('soy App y estan cambiando mi estado!')
+  //   console.log('entran ',userName,loggedIn)
+  //   setState({...state,userName,loggedIn})
+  //   console.log(state)
+  // }
 
-  const [state, setState] = React.useState({
-    setLoggedIn,
-    userName: '',
-    loggedIn: false,
-  });
+  // const [state, setState] = React.useState({
+  //   setLoggedIn,
+  //   userName: '',
+  //   loggedIn: false,
+  // });
 
   return (
     <div className="panel-container">
-    <UserContext.Provider>
+    <UserContext.Consumer>
         <BrowserRouter>
           <Fragment>
             <Navbar></Navbar>
@@ -42,12 +42,12 @@ function App() {
             <Route exact path="/pet-detail" component={PetDetails}></Route>
             <Route exact path="/human-register" component={HumanRegister}></Route>
             <Route exact path="/pet-register" component={PetRegister}></Route>
-            <Route exact path="/login" component={Login} setState={setState}></Route>
+            <Route exact path="/login" component={Login}></Route>
             <Route exact path="/applicants" component={Applicants}></Route>
             <Footer></Footer>
           </Fragment>
         </BrowserRouter>
-        </UserContext.Provider>
+        </UserContext.Consumer>
     </div>
    
    

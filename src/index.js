@@ -7,8 +7,9 @@ import UserContext from './shared/UserContext';
 
 ReactDOM.render(
 <UserContext.Provider>
-<App />, document.getElementById('root')
-</UserContext.Provider>
+<App />
+</UserContext.Provider>, 
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

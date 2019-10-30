@@ -21,23 +21,22 @@ export const Login = ({ error, disabled, onSubmit, title }) =>{
                           <div className="row">
                               <div className="col-md-2">
                               <form onSubmit = { handleSubmit }>
-                                      <input 
+                                      <input className="textbox"
                                       name="userNAme"
                                       disabled = {disabled}
                                       //onChange={handleChange}
                                       type="text" 
                                       placeholder="Usuario *" 
-                                      className="textbox"
                                       {...userNAme}/>
                               
                               
-                                      <input 
+                                      <input className="textbox"
                                       name="password"
                                       disabled = {disabled}
                                       //onChange={handleChange}
                                       type="password" 
                                       placeholder="Contraseña *" 
-                                      className="textbox"/>
+                                      {...password}/>
                               
                                       <br/><br/>
       
