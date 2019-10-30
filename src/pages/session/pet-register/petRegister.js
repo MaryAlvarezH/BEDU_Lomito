@@ -6,21 +6,35 @@ import { format } from 'util';
 
 class PetRegister extends Component {
     state ={    
-        name: '',
-        sort: '',
-        gender: '',
-        breed: '',
-        size: '',
-        temperament: '',
-        age: '',
-        hometown: '',
-        skills: '',
-        observations: ''
+        name: '',//x
+        sort: '',//x
+        gender: '',//x
+        breed: '',//x
+        size: '',//x
+        temperament: '',//x
+        age_number:'',//x
+        age_timePeriod:'',//x
+        hometown: '',//x
+        skills: ['',''],//x
+        observations: [''],//x
+        //ownerId:''
+        //selectedFile:null
         };
     dataImg = {};
     // stateImgPet ={
     //     imagePet:''
     //   }
+
+
+
+
+
+
+
+
+
+
+
       onSubmitHandler = async (evt) => {
          evt.preventDefault();
         //  console.log(this.state);
@@ -29,15 +43,17 @@ class PetRegister extends Component {
             const imageUploadbar = document.getElementsByClassName("imagePetBar")
             const result = await axios({
                 method:'POST',
-                url: 'https://lomito-server.herokuapp.com/api/pets/add-pet',
+                //url: 'https://lomito-server.herokuapp.com/api/pets/add-pet',
                 //url: 'http://localhost:4001/Pets-info',
+                url: 'http://localhost:3000/api/pets/add-pet',
                 data: this.state
             })
             console.log('dataI',this.dataImg);
             const resImage = await axios({
                 method: 'POST',
-                url: 'https://lomito-server.herokuapp.com/api/pets/load-image',
+                //url: 'https://lomito-server.herokuapp.com/api/pets/load-image',
                 //url: 'http://localhost:4001/Pets-info',
+                url: 'http://localhost:3000/api/pets/add-pet',
                 data: {
                     file: this.dataImg
                 },
@@ -168,12 +184,25 @@ class PetRegister extends Component {
                             onChange={this.onChangeHandler} 
                             placeholder="¿Como es el temperamento de tu Lomito?" />
                         </li>
-                        <li>
-                            <label htmlFor="age"/>
-                            <input type="num" name = "age" value={this.state.age}  
+                            
+                            <li>
+                            <label htmlFor="age_number"/>
+                            <input type="number" min='1' max='16' value={this.state.age_number}  name="age_number" 
                             onChange={this.onChangeHandler}
                             placeholder="Fecha de nacimiento del Lomito"/>
-                        </li>
+                            </li>
+
+                            <li>
+                            <label htmlFor="age_timePeriod"/>
+                            <select  name="age_timePeriod" 
+                            value={this.state.age_timePeriod}
+                            onChange={this.onChangeHandler}
+                            >
+                            <option value="months">Meses</option>
+                            <option value="years">Años</option>
+                            </select>
+                            </li>
+
                         <li>
                             <label htmlFor="hometown"/>
                             <input type="text" name="hometown" 
