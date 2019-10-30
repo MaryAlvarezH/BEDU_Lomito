@@ -43,11 +43,13 @@
     }
    
     .pages-items a:hover {
-        box-shadow: inset 0 3px 0 0 #ededed;
+        // box-shadow: inset 0 3px 0 0 #ededed;
+        color:$color5
     }
 
     .pages-items .is-selected {
-        box-shadow: inset 0 3px 0 0 white!important;
+        // box-shadow: inset 0 3px 0 0 white!important;
+        color:$color5
     }
 }
 

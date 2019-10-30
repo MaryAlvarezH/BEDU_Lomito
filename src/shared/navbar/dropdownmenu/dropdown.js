@@ -33,19 +33,23 @@ showDropdownMenu(event) {
     return (
         <div  className="dropdown" >
          <div className="button-4" onClick={this.showDropdownMenu}><i className="fa fa-user-circle user-icon"></i></div>
+         
 
-          { this.state.displayMenu ? (
-          <ul className="drop">
-            <li><NavLink exact to="/login" activeClassName="is-selected">Iniciar sesión</NavLink></li>
-            <li><NavLink exact to="/human-register" activeClassName="is-selected">Registarse</NavLink></li>
-            <li><NavLink exact to="/applicants" activeClassName="is-selected">Mis solicitudes</NavLink></li>
-          </ul>
-        ):
-        (
-          null
-        )
-        }
-
+         <div className='dropDownC'>
+          { 
+            this.state.displayMenu ? (
+              <ul className="drop">
+                <li><NavLink exact to="/applicants" className='item2' activeClassName="is-selected">Mis solicitudes</NavLink></li>
+                <li><NavLink exact to="/login" className='item2' activeClassName="is-selected">Iniciar sesión</NavLink></li>
+                <li><NavLink exact to="/human-register" className='item2' activeClassName="is-selected">Registarse</NavLink></li>
+                
+              </ul>
+            ):
+            (
+              null
+            )
+          }
+         </div>
        </div>
 
     );

@@ -44,6 +44,7 @@ function Login(props) {
           { context => (
                 <div className="login-container">
                 <div className="login-card">
+                <h2>Inicio de Sesión</h2>
                     <div className="row">
                         <div className="col-md-2">
                         <form onSubmit = {evt}>
@@ -64,7 +65,7 @@ function Login(props) {
                         
                                 <br/><br/>
 
-                                <input
+                                <input className='loginButton'
                                     type="submit"
                                     name="submit"
                                     onClick={handleClick}

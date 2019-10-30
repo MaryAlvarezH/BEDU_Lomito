@@ -129,8 +129,8 @@ class PetRegister extends Component {
             </select>
             </li>
             <li>
-            <button className="btn">Upload a file</button>
             <input type="file" name="myfile" />
+            <button className="btn">Upload a file</button>
             </li>
             <li>
             <label htmlFor="uploadInfo"/>
