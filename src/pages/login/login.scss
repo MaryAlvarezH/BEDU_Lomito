@@ -18,13 +18,20 @@
 
 .textbox {
     height: 20px;
+    &[disabled] {
+        opacity: .3;
+      }
 }
 
 .loginButton{
     padding-left: 30px;
+    &[disabled] {
+        opacity: .3;
+      }
 } 
 
 .legend-error {
     color:darkred;
     font-size: 16px;
 }
+

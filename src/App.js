@@ -8,7 +8,7 @@ import HumanRegister from './pages/human-register/humanRegister';
 import PetRegister from './pages/pet-register/petRegister';
 import PetDetails from './pages/pet-details/pet-details';
 import Footer from './shared/footer/footer';
-import Login from './pages/login/login';
+import { Login } from './pages/login/login';
 import Applicants from './pages/applicants/applicants';
 
 import './App.scss'
