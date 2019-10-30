@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter,Route} from 'react-router-dom'
-import { UserContext } from './shared/user-context';
+import { UserContext } from './shared/UserContext';
 import Navbar from './shared/navbar/bar/navbar';
 import Home from './pages/home/home';
 import Adopt from './pages/adopt/adopt';
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="panel-container">
-    <UserContext.Provider value={state}>
+    <UserContext.Provider>
         <BrowserRouter>
           <Fragment>
             <Navbar></Navbar>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './login.scss'
-import { UserContext } from '../../shared/user-context';
+import { UserContext } from '../../shared/UserContext';
 import axios from 'axios';
 
 function Login(props) {
