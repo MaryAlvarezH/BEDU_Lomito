@@ -71,7 +71,7 @@ function ApplicantCard (props) {
                                                             <span>{index+1}</span>
                                                             <span>{applicant.name}</span>
                                                             <span>{applicant.lastName}</span>
-                                                            <span>{applicant.email}</span>
+                                                            <span className="email">{applicant.email}</span>
                                                             {
                                                                 applicant.address && 
                                                                 <span>

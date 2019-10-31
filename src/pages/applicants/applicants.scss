@@ -97,6 +97,10 @@
         span {
             text-transform: capitalize;
         }
+
+        .email {
+            text-transform: lowercase!important;
+        }
     }
 
     .subtitle {

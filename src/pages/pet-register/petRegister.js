@@ -1,7 +1,6 @@
 import React,{ Component }  from 'react'
 import { axiosInstance } from '../../shared/helpers'
 import './pet-register.scss'
-import defaultImage from '../../assets/images/pet-default.png'
 import {NavLink} from 'react-router-dom'
 
 
