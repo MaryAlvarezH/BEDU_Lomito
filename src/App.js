@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Component, createContext, Fragment} from 'react';
 import {BrowserRouter,Route} from 'react-router-dom'
 import { UserContext } from './shared/UserContext';
 import Navbar from './shared/navbar/bar/navbar';
@@ -8,32 +8,17 @@ import HumanRegister from './pages/human-register/humanRegister';
 import PetRegister from './pages/pet-register/petRegister';
 import PetDetails from './pages/pet-details/pet-details';
 import Footer from './shared/footer/footer';
-import { Login } from './pages/login/login';
+import { UserLogin } from './pages/login/login';
 import Applicants from './pages/applicants/applicants';
 
 import './App.scss'
+const { Provider, Consumer} = createContext();
 
 function App() {
 
-  // const UserAccessContext = React.createContext();
-  //  const setLoggedIn = status => setState({...state, status})
-
-  // const setLoggedIn = (userName, loggedIn) => {
-  //   console.log('soy App y estan cambiando mi estado!')
-  //   console.log('entran ',userName,loggedIn)
-  //   setState({...state,userName,loggedIn})
-  //   console.log(state)
-  // }
-
-  // const [state, setState] = React.useState({
-  //   setLoggedIn,
-  //   userName: '',
-  //   loggedIn: false,
-  // });
-
   return (
     <div className="panel-container">
-    <UserContext.Consumer>
+      <UserContext.Provider>
         <BrowserRouter>
           <Fragment>
             <Navbar></Navbar>
@@ -42,12 +27,12 @@ function App() {
             <Route exact path="/pet-detail" component={PetDetails}></Route>
             <Route exact path="/human-register" component={HumanRegister}></Route>
             <Route exact path="/pet-register" component={PetRegister}></Route>
-            <Route exact path="/login" component={Login}></Route>
+            <Route exact path="/login" component={ UserLogin }></Route>
             <Route exact path="/applicants" component={Applicants}></Route>
             <Footer></Footer>
           </Fragment>
         </BrowserRouter>
-        </UserContext.Consumer>
+      </UserContext.Provider>
     </div>
    
    

@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react'
 import UserContext from '../../shared/UserContext'
-import { login } from '../../pages/login/login'
+import { UserLogin } from '../../pages/login/login'
 import { LoginMutation } from '../container/LoginMutation'
 
 export const NotRegisteredUser = () => {
@@ -8,21 +8,21 @@ export const NotRegisteredUser = () => {
 
   return (
     <Fragment>
-      <LoginMutation>
+      <LoginMutation>›
         {
-          (loginUser, { data, loading, error }) => {
+          (login, { data, loading, error }) => {
             const onSubmit = ({ userNAme, password }) => {
               const input = { userNAme, password }
               const variables = { input }
-              loginUser({ variables }).then(({ data }) => {
-                const { loginUser } = data
-                activateAuth(loginUser)
+              login({ variables }).then(({ data }) => {
+                const { login } = data
+                activateAuth(login)
               })
             }
-
+            console.log("this onSumit NotRegisterUser", onSubmit)
             const errorMsg = error && 'La contraseña no es correcta o el usuario no existe'
 
-            return <Login disabled={loading} error={errorMsg} title='Iniciar sesión' onSubmit={onSubmit} />
+            return <UserLogin disabled={loading} error={errorMsg} title='Iniciar sesión' onSubmit={onSubmit} />
           }
         }
       </LoginMutation>

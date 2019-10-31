@@ -1,10 +1,12 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import HomeView from './homeView';
 
 class Home extends Component {
     render() {
         return (
-            <HomeView></HomeView>
+            <Fragment>
+                <HomeView></HomeView>
+            </Fragment>
         )
     }
 }
