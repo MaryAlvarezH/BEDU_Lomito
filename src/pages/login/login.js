@@ -16,7 +16,7 @@ function Login(props) {
         //const resp = await auth.signIn({email: user.email, password: user.password})
         const resp = await axios({
             method:'POST',
-            url: 'https://lomito-server.herokuapp.com/api/auth/login',
+            url: 'https://lomito-server-2.herokuapp.com/api/auth/login',
             //url: ' http://localhost:4001/users',
             data: {username: user.email, password: user.password}
         })

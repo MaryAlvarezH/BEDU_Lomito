@@ -40,7 +40,7 @@ function ApplicantCard (props) {
                                     <span>{Moment(application.createdAt).format('DD/MM/YYYY')}</span>
                                 </p>
                             </div>
-                            <div class="application-details">
+                            <div className="application-details">
                                 <div className="pet-image-profile" key={index}>
                                     {
                                         application && !application.imageURL && 

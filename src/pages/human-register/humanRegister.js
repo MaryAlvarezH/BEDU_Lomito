@@ -21,7 +21,7 @@ state = {
       try {
          const result = await axios({
              method:'POST',
-             //url: 'https://lomito-server.herokuapp.com/api/auth/signup',
+             //url: 'https://lomito-server-2.herokuapp.com/api/auth/signup',
              url: 'http://localhost:4001/users',
              data: this.state
          })

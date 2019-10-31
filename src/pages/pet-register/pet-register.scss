@@ -1,28 +1,31 @@
 .container-pet {
-
-    .flat-form-lomito {
-        background-color:white;
-        box-shadow: 0px 0px 12px rgba(0, 0,0,0.2);
-        margin: 25px auto;//poner enmedio con margen
-        width: 580px;
-        height: 650px;
-        font-size: 20px;
-        border-radius: 6px; 
-        color: #5b5b5b;   
-    }   
+    background-color:white;
+    box-shadow: 0px 0px 12px rgba(0, 0,0,0.2);
+    margin: 25px auto;//poner enmedio con margen
+    width: 580px;
+    height: 650px;
+    font-size: 20px;
+    border-radius: 6px; 
+    color: #5b5b5b;
+}
+.container-pet {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: 20px; 
 
     .flat-form-lomito {
         h2 {
             font-size: 25px;
             padding-bottom: 10px;
-            font-family: 'handlee', cursive;
+            font-family: 'Lato', sans-serif;;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         p {
-            font-size: 17px;
+            font-size: 16px;
             padding-bottom: 5px;
             display: flex;
             align-items: center;
@@ -35,7 +38,7 @@
     form input[type=text],
     form input[type=password],
     form input[type=date] {
-        width: 90%;
+        width: 261px;
         height: 35px;
         font-size: 13px;  
         background: #fff;
@@ -47,7 +50,6 @@
     .tabs-Lomito {
         height: 100px;
         margin: 0;
-        padding: 10px;
         list-style-type: none;
         width: 100%;
         position: relative;
@@ -56,47 +58,17 @@
 
         li {
             display: block;
+            margin: 10px 0;
         }
         li:last-child {
             border-right: none;
-            width: 174px;
             padding-left: 0;
             padding-right: 0;
             text-align: center;
         }
     }
 
-    select {
-        width: 45%;
-        height: 35px;
-        font-size: 13px;  
-        background: #fff;
-        border: 1 px;
-        outline: none;
-        font-family: 'Arial';
-        color: #5b5b5b;
-    }
-
-    form input[type=submit] {
-        margin: 30px auto;
-        width: 100px; /*poner enmedio*/
-        height: 40px;/*largo*/
-        font-size: 15px;
-        filter: blur(0.4px);
-        display: flex;
-        background: #55ACEE;
-        border-radius: 5px;
-        border: none;
-    }
-
-    form input[type=submit]:active{
-        color: #3B5998;
-    }
-
-    form input[type=submit]:hover{
-        color:#f78441;
-        opacity: 0.7;
-    }
+    
 
     form input[type='file'] {
         border-radius: 5px;
@@ -106,4 +78,125 @@
         border-radius: 5px;
         cursor: pointer;
     }
+    .file-container {
+        margin-top: 280px;
+    }
+}
+
+@mixin group-template($justify, $width) {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: center;
+    width: $width;
+}
+
+.group {
+    @include group-template(space-between, 260px)
+}
+
+.group-actions {
+    @include group-template(flex-end, 300px);
+    margin-top:40vh;
+}
+
+.group-actions-big {
+    @include group-template(flex-start, 430px);
+    margin-top:15px;
+    margin-left: 40px;
+}
+
+.select {
+    width: 45%;
+    height: 35px;
+    font-size: 13px;  
+    background: #fff;
+    border: 1px;
+    outline: none;
+    font-family: 'Arial';
+    color: #5b5b5b;
+}
+
+.legend-age {
+    color: #5b5b5b;
+    font-size: 13px;
+
+}
+
+.select-number {
+    width: 60px;
+    height: 32px;
+    font-size: 13px;  
+    background: #fff;
+    border: 1px solid #A6A6A6;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Arial';
+    color: #5b5b5b;
+}
+
+.btn-send {
+    background-color: #FFAC7C;
+    color: white;
+    height: 36px;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pet-detail {
+    display: flex;
+   justify-content: space-between;
+
+}
+
+.pet-profile {
+    margin-left: 70%;
+    margin-top: -80px;
+    text-align: center;
+   
+
+    img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+    }
+
+    a {
+        z-index: 100;
+    }
+   
+}
+
+@mixin legend($align) {
+    display: block;
+    font-size: 17.5px;
+    color:#787878!important;
+    // text-decoration: none;
+    text-align: center;
+}
+
+.legend-link {
+    @include legend (center);
+    cursor: pointer!important;
+}
+
+.legend-success {
+    @include legend (left);
+    color:green!important;
+    font-size: 14px!important;
+    font-weight: 600;
+    display: inline;
+    margin-left: 40px;
+}
+.legend-advice {
+    font-size: 14px!important;
+    display: inline;
+    margin-left: 5px;
+}
+
+.image-container {
+    margin-top:37vh;
 }
